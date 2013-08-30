@@ -1,0 +1,25 @@
+<!doctype html>
+<html>
+<head>
+  <title></title>
+  <style type="text/css">
+  #chat {
+    height: 500px;
+    border: 2px solid gray;
+  }
+
+  </style>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+  <script src='/socket.io/socket.io.js'></script>
+</head>
+<body>
+  <form id='send-message'>
+    <input size='35' id='message'></input>
+    <input type='submit'></input>
+  </form>
+
+  <div id='chat'>
+
+  </div>
+</body>
+</html>
