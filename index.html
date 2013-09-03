@@ -21,5 +21,23 @@
   <div id='chat'>
 
   </div>
+  <script type="text/javascript">
+    var socket = io.connect();
+    var form = $('#send-message');
+    var message = $('#message');
+    var chat = $('#chat');
+
+    form.submit(function(e) {
+      e.preventDefault();
+      socket.emit('send message', message.val());
+    });
+
+    socket.on('new message', function(data) {
+      chat.append(data + '<br>');
+    });
+
+  </script>
+
+
 </body>
 </html>
